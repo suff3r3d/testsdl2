@@ -26,8 +26,11 @@ void Gun::shoot(int x, int y) {
 }
 
 void Gun::update() {
-    for (Ball *ball : balls) {
-        ball->update();
+    for (int i = 0; i < balls.size(); i++) {
+        if (balls[i] == 0) continue;
+        balls[i]->update();
+        printf("%d\n", balls[i]->touchedWall);
+        if (balls[i]->touchedWall == 2) balls[i] = NULL;
     }
 }
 
@@ -38,6 +41,7 @@ void Gun::draw(SDL_Renderer *renderer) {
     //printf("%d\n", balls.size());
     for (Ball *ball : balls) {
         //printf("h");
+        if (ball == NULL) continue;
         ball->draw(renderer);
     }
 }

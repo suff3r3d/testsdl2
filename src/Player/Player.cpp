@@ -1,9 +1,5 @@
 #include "Player.h"
 
-const int jump_velocity = 13;
-const int speed = 10;
-const int friction = 6;
-
 Player::Player(int w, int h, int x, int y) {
     shape.w = w;
     shape.h = h;
@@ -12,37 +8,12 @@ Player::Player(int w, int h, int x, int y) {
 
     velocity.first = velocity.second = 0;
     acceleration.first = acceleration.second = 0;
-}
 
-bool Player::onGround() {
-    return shape.y >= SCREEN_HEIGHT - shape.h;
-}
-
-void Player::jump() {
-    if (onGround()) {
-        velocity.first -= jump_velocity;
-    }
+    speed = 7;
 }
 
 void Player::update() {
-    //printf("ha");
-    velocity.first += gravity * delta; 
-    shape.y += velocity.first;
-    //printf("%d\n", velocity.first);
-    if (onGround()) {
-        velocity.first = 0;
-        shape.y = SCREEN_HEIGHT - shape.h;
-    }
-    
-
-    bool positive = (bool)(velocity.second > 0);
-    velocity.second += acceleration.second * delta;
-    shape.x += velocity.second;
-    if (positive != (velocity.second > 0)) {
-        velocity.second = 0;
-        acceleration.second = 0;
-    }
-
+    shape.x += velocity.first, shape.y += velocity.second;
     handleOutofScreen();
 }
 
@@ -62,17 +33,25 @@ void Player::draw(SDL_Renderer *renderer) {
     SDL_RenderFillRect(renderer, &shape);
 }
 
-void Player::run(int dir) {
-    //left :-1, right: 1
-    if (dir == 1) {
-        velocity.second = speed;
-        acceleration.second = 0;
-    } else {
-        velocity.second = -speed;
-        acceleration.second = 0;
+void Player::handleKeyPressed(SDL_Keycode key) {
+    //printf("Key pressed\n");
+    switch (key) {
+        case SDLK_w:
+            velocity.second = -speed;
+            break;
+        case SDLK_s:
+            velocity.second = speed;
+            break;
+        case SDLK_a:
+            velocity.first = -speed;
+            break;
+        case SDLK_d:
+            velocity.first = speed;
+            break;
     }
 }
 
-void Player::stop(int dir) {
-    acceleration.second = (dir == 1 ? -friction : friction);
+void Player::handleKeyReleased(SDL_Keycode key) {
+    if (key == SDLK_w || key == SDLK_s) velocity.second = 0;
+    if (key == SDLK_a || key == SDLK_d) velocity.first = 0;
 }

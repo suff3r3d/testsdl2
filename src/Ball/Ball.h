@@ -12,7 +12,10 @@ private:
     std::pair<double, double> velocity;
 
     int speed;
+    
 public:
+    int touchedWall;
+    
     Ball(int x, int y);
     int getSpeed();
 

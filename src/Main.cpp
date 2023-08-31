@@ -18,7 +18,7 @@ SDL_Window *window;
 SDL_Renderer *renderer;
 
 void GameLoop() {
-    //Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT - 50);
+    Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50);
     //Ball ball = Ball(50, 50);
     Gun gun = Gun();
 
@@ -35,36 +35,17 @@ void GameLoop() {
                 case SDL_KEYDOWN:
                     //printf("Pressed %s\n", SDL_GetKeyName(e.key.keysym.sym));
 
-                    switch (e.key.keysym.sym) {
-                        case SDLK_UP:   
-                            //player.jump();
-                            break;
-                        case SDLK_RIGHT:
-                            //player.run(1);
-                            break;
-                        case SDLK_LEFT:
-                            //player.run(-1);
-                            break;
-                    }
+                    player.handleKeyPressed(e.key.keysym.sym);
                     break;
                 case SDL_KEYUP:
                    // printf("Released %s\n", SDL_GetKeyName(e.key.keysym.sym));
 
-                    switch (e.key.keysym.sym) {
-                        case SDLK_RIGHT:
-                            //player.stop(1);
-                            break;
-                        case SDLK_LEFT:
-                            //player.stop(-1);
-                            break;
-                        default:
-                            break;
-                    } 
+                    player.handleKeyReleased(e.key.keysym.sym);
                     break;
 
                 case SDL_MOUSEBUTTONDOWN:
                     if (e.button.state == SDL_PRESSED) {
-                        printf("Mouse clicked!\n");
+                        //printf("Mouse clicked!\n");
                         printf("%d %d\n", e.button.x, e.button.y);
                         gun.shoot(e.button.x, e.button.y);
                     }
@@ -74,7 +55,7 @@ void GameLoop() {
             }
         }
 
-        //player.update();
+        player.update();
         //ball.update();
         gun.update();
 
@@ -82,9 +63,8 @@ void GameLoop() {
         SDL_RenderClear(renderer);
         SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 
-        //player.draw(renderer);
+        player.draw(renderer);
         //ball.draw(renderer);
-
         gun.draw(renderer);
 
         SDL_RenderPresent(renderer);
