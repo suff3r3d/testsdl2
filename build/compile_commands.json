@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/chungdinh/Code/testSDL2/build",
+  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Main.cpp.o -c /home/chungdinh/Code/testSDL2/src/Main.cpp",
+  "file": "/home/chungdinh/Code/testSDL2/src/Main.cpp"
+},
+{
+  "directory": "/home/chungdinh/Code/testSDL2/build",
+  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.o -c /home/chungdinh/Code/testSDL2/src/Player/Player.cpp",
+  "file": "/home/chungdinh/Code/testSDL2/src/Player/Player.cpp"
+},
+{
+  "directory": "/home/chungdinh/Code/testSDL2/build",
+  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.o -c /home/chungdinh/Code/testSDL2/src/Ball/Ball.cpp",
+  "file": "/home/chungdinh/Code/testSDL2/src/Ball/Ball.cpp"
+},
+{
+  "directory": "/home/chungdinh/Code/testSDL2/build",
+  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o -c /home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp",
+  "file": "/home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp"
+},
+{
+  "directory": "/home/chungdinh/Code/testSDL2/build",
+  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o -c /home/chungdinh/Code/testSDL2/src/Stuff/Stuff.cpp",
+  "file": "/home/chungdinh/Code/testSDL2/src/Stuff/Stuff.cpp"
+}
+]
