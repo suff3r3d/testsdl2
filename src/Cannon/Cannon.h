@@ -3,14 +3,14 @@
 
 #include <vector>
 
-class Gun {
+class Cannon {
 private:
     SDL_Rect shape;
 
     Color color;
     std::vector<Ball *> balls;
 public:
-    Gun();
+    Cannon();
 
     void shoot(int x, int y);
 

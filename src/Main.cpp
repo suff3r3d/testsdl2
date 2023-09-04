@@ -5,7 +5,7 @@
 
 //#include <SDL.h>
 #include "Player/Player.h"
-#include "Gun/Gun.h"
+#include "Cannon/Cannon.h"
 
 /*
 IMPORTANT FUNCTIONS IN SDL
@@ -20,7 +20,7 @@ SDL_Renderer *renderer;
 void GameLoop() {
     Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50);
     //Ball ball = Ball(50, 50);
-    Gun gun = Gun();
+    Cannon cannon = Cannon();
 
     bool quit = false;
 
@@ -47,7 +47,7 @@ void GameLoop() {
                     if (e.button.state == SDL_PRESSED) {
                         //printf("Mouse clicked!\n");
                         printf("%d %d\n", e.button.x, e.button.y);
-                        gun.shoot(e.button.x, e.button.y);
+                        cannon.shoot(e.button.x, e.button.y);
                     }
                 
                 default:
@@ -57,7 +57,7 @@ void GameLoop() {
 
         player.update();
         //ball.update();
-        gun.update();
+        cannon.update();
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
         SDL_RenderClear(renderer);
@@ -65,7 +65,7 @@ void GameLoop() {
 
         player.draw(renderer);
         //ball.draw(renderer);
-        gun.draw(renderer);
+        cannon.draw(renderer);
 
         SDL_RenderPresent(renderer);
 
@@ -78,14 +78,13 @@ void GameLoop() {
     }
 }
 
-int main(int argc, char* argv[])
-{
+bool init() {
     // Initialize SDL
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
     {
         printf("SDL could not be initialized!\n"
                "SDL_Error: %s\n", SDL_GetError());
-        return 0;
+        return false;
     }
 
 #if defined linux && SDL_VERSION_ATLEAST(2, 0, 8)
@@ -93,7 +92,7 @@ int main(int argc, char* argv[])
     if(!SDL_SetHint(SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR, "0"))
     {
         printf("SDL can not disable compositor bypass!\n");
-        return 0;
+        return false;
     }
 #endif
 
@@ -108,12 +107,11 @@ int main(int argc, char* argv[])
     );
 
     
-    
     if(!window)
     {
         printf("Window could not be created!\n"
                "SDL_Error: %s\n", SDL_GetError());
-        return -1;
+        return false;
     }
 
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -121,17 +119,30 @@ int main(int argc, char* argv[])
     if (!renderer) {
         printf("Renderer could not be created!\n"
                "SDL_Error: %s\n", SDL_GetError());
-        return -1;
+        return false;
     }
 
-    GameLoop();
-
-
-
+    return true;
+}
+void close() {
     // Quit SDL
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
+}
+
+void loadMedia() {}
+
+int main(int argc, char* argv[])
+{
+    
+    if (!init()) return -1;
+    loadMedia();
+
+    GameLoop();
+
+    close();
+    
 
     return 0;
 }

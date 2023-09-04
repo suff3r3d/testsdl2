@@ -266,7 +266,7 @@ CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.o: src/Ball/Ball.cpp \
   /usr/include/c++/11/bits/invoke.h \
   src/Stuff/Stuff.h
 
-CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o: src/Gun/Gun.cpp \
+CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o: src/Cannon/Cannon.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_main.h \
@@ -520,7 +520,7 @@ CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o: src/Gun/Gun.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
-  src/Gun/Gun.h \
+  src/Cannon/Cannon.h \
   src/Ball/Ball.h \
   /usr/include/c++/11/tuple \
   /usr/include/c++/11/utility \
@@ -815,7 +815,7 @@ CMakeFiles/SDL2Test.dir/src/Main.cpp.o: src/Main.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
-  src/Gun/Gun.h \
+  src/Cannon/Cannon.h \
   src/Ball/Ball.h \
   /usr/include/c++/11/tuple \
   /usr/include/c++/11/array \
@@ -1138,7 +1138,9 @@ src/Player/Player.h:
 
 /usr/include/c++/11/vector:
 
-src/Gun/Gun.h:
+src/Cannon/Cannon.h:
+
+src/Cannon/Cannon.cpp:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
@@ -1413,8 +1415,6 @@ src/Ball/Ball.h:
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/string.h:
-
-src/Gun/Gun.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 

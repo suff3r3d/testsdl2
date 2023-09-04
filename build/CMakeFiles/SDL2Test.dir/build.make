@@ -111,19 +111,19 @@ CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chungdinh/Code/testSDL2/src/Ball/Ball.cpp -o CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.s
 
-CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o: CMakeFiles/SDL2Test.dir/flags.make
-CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o: ../src/Gun/Gun.cpp
-CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o: CMakeFiles/SDL2Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chungdinh/Code/testSDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o -MF CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o.d -o CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o -c /home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp
+CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o: CMakeFiles/SDL2Test.dir/flags.make
+CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o: ../src/Cannon/Cannon.cpp
+CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o: CMakeFiles/SDL2Test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chungdinh/Code/testSDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o -MF CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o.d -o CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o -c /home/chungdinh/Code/testSDL2/src/Cannon/Cannon.cpp
 
-CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp > CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.i
+CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chungdinh/Code/testSDL2/src/Cannon/Cannon.cpp > CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.i
 
-CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp -o CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.s
+CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chungdinh/Code/testSDL2/src/Cannon/Cannon.cpp -o CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.s
 
 CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o: CMakeFiles/SDL2Test.dir/flags.make
 CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o: ../src/Stuff/Stuff.cpp
@@ -144,7 +144,7 @@ SDL2Test_OBJECTS = \
 "CMakeFiles/SDL2Test.dir/src/Main.cpp.o" \
 "CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.o" \
 "CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.o" \
-"CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o" \
+"CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o" \
 "CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o"
 
 # External object files for target SDL2Test
@@ -153,7 +153,7 @@ SDL2Test_EXTERNAL_OBJECTS =
 SDL2Test: CMakeFiles/SDL2Test.dir/src/Main.cpp.o
 SDL2Test: CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.o
 SDL2Test: CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.o
-SDL2Test: CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o
+SDL2Test: CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o
 SDL2Test: CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o
 SDL2Test: CMakeFiles/SDL2Test.dir/build.make
 SDL2Test: CMakeFiles/SDL2Test.dir/link.txt

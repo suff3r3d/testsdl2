@@ -1,8 +1,8 @@
 #include <SDL.h>
 
-#include "Gun.h"
+#include "Cannon.h"
 
-Gun::Gun() {
+Cannon::Cannon() {
     shape.h = shape.w = 50;
     shape.x = SCREEN_WIDTH - shape.w / 2;
     shape.y = SCREEN_HEIGHT / 2 - shape.h / 2;
@@ -11,7 +11,7 @@ Gun::Gun() {
     color = Color(15, 24, 211, 150);
 }
 
-void Gun::shoot(int x, int y) {
+void Cannon::shoot(int x, int y) {
     x -= SCREEN_WIDTH; y -= SCREEN_HEIGHT / 2;
 
     Ball *newBall = new Ball(SCREEN_WIDTH - 50 / 2, SCREEN_HEIGHT / 2 - 50 / 2);
@@ -25,16 +25,16 @@ void Gun::shoot(int x, int y) {
     //printf("%d\n", balls.size());
 }
 
-void Gun::update() {
+void Cannon::update() {
     for (int i = 0; i < balls.size(); i++) {
         if (balls[i] == 0) continue;
         balls[i]->update();
-        printf("%d\n", balls[i]->touchedWall);
+        //printf("%d\n", balls[i]->touchedWall);
         if (balls[i]->touchedWall == 2) balls[i] = NULL;
     }
 }
 
-void Gun::draw(SDL_Renderer *renderer) {
+void Cannon::draw(SDL_Renderer *renderer) {
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderFillRect(renderer, &shape);
 

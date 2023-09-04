@@ -10,5 +10,5 @@ project(SDL2Test)
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
-add_executable(SDL2Test src/Main.cpp src/Player/Player.cpp src/Ball/Ball.cpp src/Gun/Gun.cpp src/Stuff/Stuff.cpp)
+add_executable(SDL2Test src/Main.cpp src/Player/Player.cpp src/Ball/Ball.cpp src/Cannon/Cannon.cpp src/Stuff/Stuff.cpp)
 target_link_libraries(SDL2Test ${SDL2_LIBRARIES})

@@ -153,29 +153,29 @@ src/Ball/Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.s
 .PHONY : src/Ball/Ball.cpp.s
 
-src/Gun/Gun.o: src/Gun/Gun.cpp.o
-.PHONY : src/Gun/Gun.o
+src/Cannon/Cannon.o: src/Cannon/Cannon.cpp.o
+.PHONY : src/Cannon/Cannon.o
 
 # target to build an object file
-src/Gun/Gun.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o
-.PHONY : src/Gun/Gun.cpp.o
+src/Cannon/Cannon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o
+.PHONY : src/Cannon/Cannon.cpp.o
 
-src/Gun/Gun.i: src/Gun/Gun.cpp.i
-.PHONY : src/Gun/Gun.i
+src/Cannon/Cannon.i: src/Cannon/Cannon.cpp.i
+.PHONY : src/Cannon/Cannon.i
 
 # target to preprocess a source file
-src/Gun/Gun.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.i
-.PHONY : src/Gun/Gun.cpp.i
+src/Cannon/Cannon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.i
+.PHONY : src/Cannon/Cannon.cpp.i
 
-src/Gun/Gun.s: src/Gun/Gun.cpp.s
-.PHONY : src/Gun/Gun.s
+src/Cannon/Cannon.s: src/Cannon/Cannon.cpp.s
+.PHONY : src/Cannon/Cannon.s
 
 # target to generate assembly for a file
-src/Gun/Gun.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.s
-.PHONY : src/Gun/Gun.cpp.s
+src/Cannon/Cannon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.s
+.PHONY : src/Cannon/Cannon.cpp.s
 
 src/Main.o: src/Main.cpp.o
 .PHONY : src/Main.o
@@ -261,9 +261,9 @@ help:
 	@echo "... src/Ball/Ball.o"
 	@echo "... src/Ball/Ball.i"
 	@echo "... src/Ball/Ball.s"
-	@echo "... src/Gun/Gun.o"
-	@echo "... src/Gun/Gun.i"
-	@echo "... src/Gun/Gun.s"
+	@echo "... src/Cannon/Cannon.o"
+	@echo "... src/Cannon/Cannon.i"
+	@echo "... src/Cannon/Cannon.s"
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"

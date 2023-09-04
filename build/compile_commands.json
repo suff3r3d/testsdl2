@@ -16,8 +16,8 @@
 },
 {
   "directory": "/home/chungdinh/Code/testSDL2/build",
-  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Gun/Gun.cpp.o -c /home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp",
-  "file": "/home/chungdinh/Code/testSDL2/src/Gun/Gun.cpp"
+  "command": "/usr/bin/c++ -DSCREEN_HEIGHT=720 -DSCREEN_WIDTH=1280 -Ddelta=33.3333333e-3f -Dgravity=9.8 -I/usr/include/SDL2 -g -o CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o -c /home/chungdinh/Code/testSDL2/src/Cannon/Cannon.cpp",
+  "file": "/home/chungdinh/Code/testSDL2/src/Cannon/Cannon.cpp"
 },
 {
   "directory": "/home/chungdinh/Code/testSDL2/build",
