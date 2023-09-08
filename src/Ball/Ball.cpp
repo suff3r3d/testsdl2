@@ -1,6 +1,8 @@
 #include "Ball.h"
 #include <tuple>
 
+#include "../Defines.h"
+
 Ball::Ball(int x, int y) {
     shape.x = x; shape.y = y;
     shape.h = shape.w = 20;

@@ -1,5 +1,7 @@
 #include "Player.h"
 
+#include "../Defines.h"
+
 Player::Player(int w, int h, int x, int y) {
     shape.w = w;
     shape.h = h;

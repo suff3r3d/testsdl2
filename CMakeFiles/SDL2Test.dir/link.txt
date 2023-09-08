@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/SDL2Test.dir/src/Main.cpp.o CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.o CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.o CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o -o SDL2Test  -L/usr/lib/x86_64-linux-gnu  -lSDL2 
