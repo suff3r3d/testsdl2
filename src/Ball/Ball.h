@@ -4,6 +4,8 @@
 
 #include "../Stuff/Stuff.h"
 
+#ifndef BALL
+#define BALL
 
 class Ball {
 private:   
@@ -25,3 +27,5 @@ public:
     void update_velocity(int x, int y);
     void draw(SDL_Renderer *renderer);
 };
+
+#endif

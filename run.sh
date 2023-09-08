@@ -1,0 +1,1 @@
+g++ -o main ./src/Main.cpp ./src/Cannon/Cannon.cpp ./src/Ball/Ball.cpp ./src/Player/Player.cpp `sdl2-config --cflags --libs`
