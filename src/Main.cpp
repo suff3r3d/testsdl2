@@ -69,21 +69,21 @@ void GameLoop() {
             }
         }
 
-        //player.update();
-        //ball.update();
-        //cannon.update();
+        player.update();
+        // ball.update();
+        cannon.update();
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
         SDL_RenderClear(renderer);
         SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 
-        //player.draw(renderer);
-        //ball.draw(renderer);
-        //cannon.draw(renderer);
+        player.draw(renderer);
+        // ball.draw(renderer);
+        cannon.draw(renderer);
 
         
-        SDL_Rect dest{50, 50, 50, 50};
-        SDL_RenderCopy(renderer, imgTexture, 0, &dest);
+        // SDL_Rect dest{50, 50, 50, 50};
+        // SDL_RenderCopy(renderer, imgTexture, 0, &dest);
         
 
         SDL_RenderPresent(renderer);

@@ -31,7 +31,7 @@ void Cannon::update() {
         if (balls[i] == 0) continue;
         balls[i]->update();
         //printf("%d\n", balls[i]->touchedWall);
-        if (balls[i]->touchedWall == 2) balls[i] = NULL;
+        if (balls[i]->touchedWall == 4) balls[i] = NULL;
     }
 }
 
