@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <cstdlib>
+#include <time.h>
 
 #include "Defines.h"
 
@@ -21,6 +23,7 @@ SDL_Window *window;
 SDL_Renderer *renderer;
 
 void GameLoop() {
+    srand(time(NULL));
     Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50);
     //Ball ball = Ball(50, 50);
     Cannon cannon = Cannon();
@@ -57,16 +60,22 @@ void GameLoop() {
                     player.handleKeyReleased(e.key.keysym.sym);
                     break;
 
-                case SDL_MOUSEBUTTONDOWN:
-                    if (e.button.state == SDL_PRESSED) {
-                        //printf("Mouse clicked!\n");
-                        printf("%d %d\n", e.button.x, e.button.y);
-                        cannon.shoot(e.button.x, e.button.y);
-                    }
+                // case SDL_MOUSEBUTTONDOWN:
+                //     if (e.button.state == SDL_PRESSED) {
+                //         //printf("Mouse clicked!\n");
+                //         printf("%d %d\n", e.button.x, e.button.y);
+                //         cannon.shoot(e.button.x, e.button.y);
+                //     }
                 
                 default:
                     break;
             }
+        }
+
+        {
+            int x = rand() % SCREEN_WIDTH;
+            int y = rand() % SCREEN_HEIGHT;
+            cannon.shoot(x,y);
         }
 
         player.update();
@@ -80,7 +89,6 @@ void GameLoop() {
         player.draw(renderer);
         // ball.draw(renderer);
         cannon.draw(renderer);
-
         
         // SDL_Rect dest{50, 50, 50, 50};
         // SDL_RenderCopy(renderer, imgTexture, 0, &dest);
