@@ -11,10 +11,11 @@ private:
     SDL_Rect shape;
 
     Color color;
-    std::vector<Ball *> balls;
+    Ball **balls;
 public:
     Cannon();
 
+    int countBalls() const;
     void shoot(int x, int y);
 
     void update();

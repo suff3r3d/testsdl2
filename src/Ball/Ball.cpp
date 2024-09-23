@@ -14,6 +14,8 @@ Ball::Ball(int x, int y) {
     touchedWall = 0;
 }
 
+Ball::Ball(): Ball(0, 0) {}
+
 int Ball::getSpeed() {return speed;}
 
 void Ball::draw(SDL_Renderer *renderer) {

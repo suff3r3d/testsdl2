@@ -19,6 +19,8 @@ public:
     int touchedWall;
     
     Ball(int x, int y);
+    Ball();
+    
     int getSpeed();
 
     void handleCollisionWithWall();
