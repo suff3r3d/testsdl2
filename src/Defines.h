@@ -5,6 +5,6 @@
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
-#define MAX_BALLS_ON_SCREEN 30ll
+#define MAX_BALLS_ON_SCREEN 20
 
 #endif
