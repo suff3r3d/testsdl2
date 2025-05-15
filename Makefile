@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chungdinh/Code/testSDL2
+CMAKE_SOURCE_DIR = /mnt/d/testsdl2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chungdinh/Code/testSDL2
+CMAKE_BINARY_DIR = /mnt/d/testsdl2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chungdinh/Code/testSDL2/CMakeFiles /home/chungdinh/Code/testSDL2//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/testsdl2/CMakeFiles /mnt/d/testsdl2//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chungdinh/Code/testSDL2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/testsdl2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SDL2Test
+# Target rules for targets named space_shooter
 
 # Build rule for target.
-SDL2Test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL2Test
-.PHONY : SDL2Test
+space_shooter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 space_shooter
+.PHONY : space_shooter
 
 # fast build rule for target.
-SDL2Test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/build
-.PHONY : SDL2Test/fast
+space_shooter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/build
+.PHONY : space_shooter/fast
 
 src/Ball/Ball.o: src/Ball/Ball.cpp.o
 .PHONY : src/Ball/Ball.o
 
 # target to build an object file
 src/Ball/Ball.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Ball/Ball.cpp.o
 .PHONY : src/Ball/Ball.cpp.o
 
 src/Ball/Ball.i: src/Ball/Ball.cpp.i
@@ -142,7 +142,7 @@ src/Ball/Ball.i: src/Ball/Ball.cpp.i
 
 # target to preprocess a source file
 src/Ball/Ball.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Ball/Ball.cpp.i
 .PHONY : src/Ball/Ball.cpp.i
 
 src/Ball/Ball.s: src/Ball/Ball.cpp.s
@@ -150,7 +150,7 @@ src/Ball/Ball.s: src/Ball/Ball.cpp.s
 
 # target to generate assembly for a file
 src/Ball/Ball.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Ball/Ball.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Ball/Ball.cpp.s
 .PHONY : src/Ball/Ball.cpp.s
 
 src/Cannon/Cannon.o: src/Cannon/Cannon.cpp.o
@@ -158,7 +158,7 @@ src/Cannon/Cannon.o: src/Cannon/Cannon.cpp.o
 
 # target to build an object file
 src/Cannon/Cannon.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Cannon/Cannon.cpp.o
 .PHONY : src/Cannon/Cannon.cpp.o
 
 src/Cannon/Cannon.i: src/Cannon/Cannon.cpp.i
@@ -166,7 +166,7 @@ src/Cannon/Cannon.i: src/Cannon/Cannon.cpp.i
 
 # target to preprocess a source file
 src/Cannon/Cannon.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Cannon/Cannon.cpp.i
 .PHONY : src/Cannon/Cannon.cpp.i
 
 src/Cannon/Cannon.s: src/Cannon/Cannon.cpp.s
@@ -174,7 +174,7 @@ src/Cannon/Cannon.s: src/Cannon/Cannon.cpp.s
 
 # target to generate assembly for a file
 src/Cannon/Cannon.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Cannon/Cannon.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Cannon/Cannon.cpp.s
 .PHONY : src/Cannon/Cannon.cpp.s
 
 src/Main.o: src/Main.cpp.o
@@ -182,7 +182,7 @@ src/Main.o: src/Main.cpp.o
 
 # target to build an object file
 src/Main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Main.cpp.o
 .PHONY : src/Main.cpp.o
 
 src/Main.i: src/Main.cpp.i
@@ -190,7 +190,7 @@ src/Main.i: src/Main.cpp.i
 
 # target to preprocess a source file
 src/Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Main.cpp.i
 .PHONY : src/Main.cpp.i
 
 src/Main.s: src/Main.cpp.s
@@ -198,7 +198,7 @@ src/Main.s: src/Main.cpp.s
 
 # target to generate assembly for a file
 src/Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
 src/Player/Player.o: src/Player/Player.cpp.o
@@ -206,7 +206,7 @@ src/Player/Player.o: src/Player/Player.cpp.o
 
 # target to build an object file
 src/Player/Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Player/Player.cpp.o
 .PHONY : src/Player/Player.cpp.o
 
 src/Player/Player.i: src/Player/Player.cpp.i
@@ -214,7 +214,7 @@ src/Player/Player.i: src/Player/Player.cpp.i
 
 # target to preprocess a source file
 src/Player/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Player/Player.cpp.i
 .PHONY : src/Player/Player.cpp.i
 
 src/Player/Player.s: src/Player/Player.cpp.s
@@ -222,7 +222,7 @@ src/Player/Player.s: src/Player/Player.cpp.s
 
 # target to generate assembly for a file
 src/Player/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Player/Player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Player/Player.cpp.s
 .PHONY : src/Player/Player.cpp.s
 
 src/Stuff/Stuff.o: src/Stuff/Stuff.cpp.o
@@ -230,7 +230,7 @@ src/Stuff/Stuff.o: src/Stuff/Stuff.cpp.o
 
 # target to build an object file
 src/Stuff/Stuff.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Stuff/Stuff.cpp.o
 .PHONY : src/Stuff/Stuff.cpp.o
 
 src/Stuff/Stuff.i: src/Stuff/Stuff.cpp.i
@@ -238,7 +238,7 @@ src/Stuff/Stuff.i: src/Stuff/Stuff.cpp.i
 
 # target to preprocess a source file
 src/Stuff/Stuff.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Stuff/Stuff.cpp.i
 .PHONY : src/Stuff/Stuff.cpp.i
 
 src/Stuff/Stuff.s: src/Stuff/Stuff.cpp.s
@@ -246,7 +246,7 @@ src/Stuff/Stuff.s: src/Stuff/Stuff.cpp.s
 
 # target to generate assembly for a file
 src/Stuff/Stuff.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL2Test.dir/build.make CMakeFiles/SDL2Test.dir/src/Stuff/Stuff.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Stuff/Stuff.cpp.s
 .PHONY : src/Stuff/Stuff.cpp.s
 
 # Help Target
@@ -257,7 +257,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SDL2Test"
+	@echo "... space_shooter"
 	@echo "... src/Ball/Ball.o"
 	@echo "... src/Ball/Ball.i"
 	@echo "... src/Ball/Ball.s"

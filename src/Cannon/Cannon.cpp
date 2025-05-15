@@ -12,6 +12,10 @@ Cannon::Cannon() {
 }
 
 void Cannon::shoot(int x, int y) {
+    if ((int)balls.size() == MAX_ALIVE_BALL) {
+      fprintf(stderr, "Maximum number of alive balls reached!\n");
+      return ;
+    }
     x -= SCREEN_WIDTH; y -= SCREEN_HEIGHT / 2;
 
     Ball *newBall = new Ball(SCREEN_WIDTH - 50 / 2, SCREEN_HEIGHT / 2 - 50 / 2);
@@ -21,16 +25,17 @@ void Cannon::shoot(int x, int y) {
 
     //newBall->update_velocity(5, 8);
 
-    balls.push_back(newBall);
+    balls.insert(newBall);
     //printf("%d\n", balls.size());
 }
 
 void Cannon::update() {
-    for (int i = 0; i < balls.size(); i++) {
-        if (balls[i] == 0) continue;
-        balls[i]->update();
-        //printf("%d\n", balls[i]->touchedWall);
-        if (balls[i]->touchedWall == 2) balls[i] = NULL;
+    for (Ball * ball : balls) {
+        ball->update();
+    }
+    for (std::set<Ball *>::iterator it = balls.begin(); it != balls.end(); ) {
+      if ((*it)->touchedWall >= MAX_WALL_TOUCH) it = balls.erase(it);
+      else it++;
     }
 }
 
@@ -38,10 +43,7 @@ void Cannon::draw(SDL_Renderer *renderer) {
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderFillRect(renderer, &shape);
 
-    //printf("%d\n", balls.size());
     for (Ball *ball : balls) {
-        //printf("h");
-        if (ball == NULL) continue;
         ball->draw(renderer);
     }
 }
