@@ -1,3 +1,0 @@
-/home/chungdinh/Code/testSDL2/build/CMakeFiles/SDL2Test.dir
-/home/chungdinh/Code/testSDL2/build/CMakeFiles/edit_cache.dir
-/home/chungdinh/Code/testSDL2/build/CMakeFiles/rebuild_cache.dir

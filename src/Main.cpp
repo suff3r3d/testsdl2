@@ -3,9 +3,12 @@
 #include <stdbool.h>
 #include <unistd.h>
 
+#include "Defines.h"
+
 //#include <SDL.h>
 #include "Player/Player.h"
 #include "Cannon/Cannon.h"
+#include "Ball/Ball.h"
 
 /*
 IMPORTANT FUNCTIONS IN SDL
@@ -21,6 +24,17 @@ void GameLoop() {
     Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50);
     //Ball ball = Ball(50, 50);
     Cannon cannon = Cannon();
+
+    SDL_Surface *imgSurface = SDL_LoadBMP("sample.bmp");
+    if (imgSurface == NULL) {
+        printf("%s\n", SDL_GetError());
+        return ;
+    }
+    SDL_Texture *imgTexture = SDL_CreateTextureFromSurface(renderer, imgSurface);
+    if (imgTexture == NULL) {
+        printf("%s\n", SDL_GetError());
+        return ;
+    }
 
     bool quit = false;
 
@@ -56,7 +70,7 @@ void GameLoop() {
         }
 
         player.update();
-        //ball.update();
+        // ball.update();
         cannon.update();
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
@@ -64,8 +78,13 @@ void GameLoop() {
         SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 
         player.draw(renderer);
-        //ball.draw(renderer);
+        // ball.draw(renderer);
         cannon.draw(renderer);
+
+        
+        // SDL_Rect dest{50, 50, 50, 50};
+        // SDL_RenderCopy(renderer, imgTexture, 0, &dest);
+        
 
         SDL_RenderPresent(renderer);
 
@@ -76,6 +95,9 @@ void GameLoop() {
             usleep(16000);
         #endif
     }
+
+    SDL_FreeSurface(imgSurface);
+    SDL_DestroyTexture(imgTexture);
 }
 
 bool init() {

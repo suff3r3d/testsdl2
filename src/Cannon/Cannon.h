@@ -6,6 +6,9 @@
 #include <set>
 #include <algorithm>
 
+#ifndef CANNON
+#define CANNON
+
 class Cannon {
 private:
     SDL_Rect shape;
@@ -20,3 +23,5 @@ public:
     void update();
     void draw(SDL_Renderer *renderer);
 };
+
+#endif
