@@ -31,20 +31,12 @@ void Cannon::shoot(int x, int y) {
 }
 
 void Cannon::update() {
-<<<<<<< HEAD
     for (Ball * ball : balls) {
         ball->update();
     }
     for (std::set<Ball *>::iterator it = balls.begin(); it != balls.end(); ) {
       if ((*it)->touchedWall >= MAX_WALL_TOUCH) it = balls.erase(it);
       else it++;
-=======
-    for (int i = 0; i < balls.size(); i++) {
-        if (balls[i] == 0) continue;
-        balls[i]->update();
-        //printf("%d\n", balls[i]->touchedWall);
-        if (balls[i]->touchedWall == 4) balls[i] = NULL;
->>>>>>> befe6959da94b93753fd47ecf87c272b2e7c20e7
     }
 }
 
