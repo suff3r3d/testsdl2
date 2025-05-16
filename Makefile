@@ -153,6 +153,30 @@ src/Ball/Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/Ball/Ball.cpp.s
 .PHONY : src/Ball/Ball.cpp.s
 
+src/BoostBox/BoostBox.o: src/BoostBox/BoostBox.cpp.o
+.PHONY : src/BoostBox/BoostBox.o
+
+# target to build an object file
+src/BoostBox/BoostBox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/BoostBox/BoostBox.cpp.o
+.PHONY : src/BoostBox/BoostBox.cpp.o
+
+src/BoostBox/BoostBox.i: src/BoostBox/BoostBox.cpp.i
+.PHONY : src/BoostBox/BoostBox.i
+
+# target to preprocess a source file
+src/BoostBox/BoostBox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/BoostBox/BoostBox.cpp.i
+.PHONY : src/BoostBox/BoostBox.cpp.i
+
+src/BoostBox/BoostBox.s: src/BoostBox/BoostBox.cpp.s
+.PHONY : src/BoostBox/BoostBox.s
+
+# target to generate assembly for a file
+src/BoostBox/BoostBox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_shooter.dir/build.make CMakeFiles/space_shooter.dir/src/BoostBox/BoostBox.cpp.s
+.PHONY : src/BoostBox/BoostBox.cpp.s
+
 src/Cannon/Cannon.o: src/Cannon/Cannon.cpp.o
 .PHONY : src/Cannon/Cannon.o
 
@@ -261,6 +285,9 @@ help:
 	@echo "... src/Ball/Ball.o"
 	@echo "... src/Ball/Ball.i"
 	@echo "... src/Ball/Ball.s"
+	@echo "... src/BoostBox/BoostBox.o"
+	@echo "... src/BoostBox/BoostBox.i"
+	@echo "... src/BoostBox/BoostBox.s"
 	@echo "... src/Cannon/Cannon.o"
 	@echo "... src/Cannon/Cannon.i"
 	@echo "... src/Cannon/Cannon.s"
