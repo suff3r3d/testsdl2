@@ -11,8 +11,12 @@ private:
 
     double speed; // left = -1, right = 1
 
-public:
+    SDL_mutex * lock;
+
     Player(int w, int h, int x, int y);
+public:
+    static Player * instance;
+    static Player * getInstance();
 
     void handleOutofScreen();
     void update();
@@ -21,4 +25,7 @@ public:
     void handleKeyReleased(SDL_Keycode key);
 
     void draw(SDL_Renderer *renderer);
+
+    void mutex_lock();
+    void mutex_unlock();
 };

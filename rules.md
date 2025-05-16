@@ -6,7 +6,7 @@ Player 2 control the human to move freely on the ground.
 A special box will emerge at a random point on the game area.
 
 Special box for Player:
-- 2x speed
+- Speedup
 
 Special box for Cannon:
 - Slow player down

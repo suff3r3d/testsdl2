@@ -7,3 +7,10 @@
 
 #define MAX_WALL_TOUCH 3
 #define MAX_ALIVE_BALL 10
+
+#define PLAYER_SPEED 10
+
+#define PLAYER_SPEEDUP 10
+#define PLAYER_SPEEDDOWN 5
+#define SPEED_EFFECT_TIME 10000
+#endif

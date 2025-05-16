@@ -2,6 +2,8 @@
 
 #include "../Defines.h"
 
+Player * Player::instance = NULL;
+
 Player::Player(int w, int h, int x, int y) {
     shape.w = w;
     shape.h = h;
@@ -11,7 +13,24 @@ Player::Player(int w, int h, int x, int y) {
     velocity.first = velocity.second = 0;
     acceleration.first = acceleration.second = 0;
 
-    speed = 7;
+    speed = PLAYER_SPEED;
+    
+    lock = SDL_CreateMutex();
+}
+
+void Player::mutex_lock() {
+  SDL_LockMutex(lock);
+}
+
+void Player::mutex_unlock() {
+  SDL_UnlockMutex(lock);
+}
+
+Player * Player::getInstance() {
+  if (instance == NULL) {
+    instance = new Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50); 
+  }
+  return instance;
 }
 
 void Player::update() {

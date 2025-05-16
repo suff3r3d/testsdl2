@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <cassert>
 
 #include "Defines.h"
 
@@ -21,7 +22,9 @@ SDL_Window *window;
 SDL_Renderer *renderer;
 
 void GameLoop() {
-    Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50);
+    // Player player = Player(50, 50, SCREEN_WIDTH / 2 - 50 / 2, SCREEN_HEIGHT / 2 - 50);
+    Player * player = Player::getInstance();
+    assert(player != NULL);
     //Ball ball = Ball(50, 50);
     Cannon cannon = Cannon();
 
@@ -41,6 +44,8 @@ void GameLoop() {
     while (!quit) {
         SDL_Event e;
 
+        player->mutex_lock();
+
         while (SDL_PollEvent(&e)) {
             switch (e.type) {
                 case SDL_QUIT:
@@ -49,12 +54,12 @@ void GameLoop() {
                 case SDL_KEYDOWN:
                     //printf("Pressed %s\n", SDL_GetKeyName(e.key.keysym.sym));
 
-                    player.handleKeyPressed(e.key.keysym.sym);
+                    player->handleKeyPressed(e.key.keysym.sym);
                     break;
                 case SDL_KEYUP:
                    // printf("Released %s\n", SDL_GetKeyName(e.key.keysym.sym));
 
-                    player.handleKeyReleased(e.key.keysym.sym);
+                    player->handleKeyReleased(e.key.keysym.sym);
                     break;
 
                 case SDL_MOUSEBUTTONDOWN:
@@ -69,7 +74,7 @@ void GameLoop() {
             }
         }
 
-        player.update();
+        player->update();
         // ball.update();
         cannon.update();
 
@@ -77,9 +82,11 @@ void GameLoop() {
         SDL_RenderClear(renderer);
         SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 
-        player.draw(renderer);
+        player->draw(renderer);
         // ball.draw(renderer);
         cannon.draw(renderer);
+
+        player->mutex_unlock();
 
         
         // SDL_Rect dest{50, 50, 50, 50};
